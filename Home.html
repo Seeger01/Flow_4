@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<meta name="viewport" content="width=device-width; initial-scale=1;">
+<link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.scrollTo.min.js"></script>
+
+<!--embedded javascript-->
+<script type="text/javascript">
+
+	//document ready function takes an anonymous function as argurement
+	$(document).ready(function(){
+		
+		// implimenting the scrollTo plugin
+		$("#stickynav a").click(function(e){
+		
+		// prevent page_refresh
+		e.preventDefault();
+		// $(element).scrollTo(target[,duration][,settings]);
+		$(window).scrollTo(this.hash,1000);
+			
+		});
+		// opening a new page in a tab
+		window.open("https://jquery.com", "_blank");
+		// end document ready
+		});
+	
+</script>
+</head>
+
+<body>
+<!--Navigation bar-->
+	<nav id="stickynav">
+		<a href="#contact">Contact</a>
+		<a href="#projects">Projects</a>
+		<a href="#about">About</a>
+	  <a href="#home">Home</a>
+	  <div><a href="#home"><img id="logo" src="Images/sweetbot_logo.png" width="431" height="93" alt=""/></a></div>
+	</nav>
+<section id="home">
+	<h1>A brilliant  one pager</h1>
+	<h2>My splendid portfolio</h2>
+</section>
+<section id="about">
+	<h2>About me (the most important person in my life)</h2>
+</section>
+<section id="projects">
+	<h2>My super duper projects</h2>
+</section>
+<section id="contact">
+	<h2>contact me ASAP</h2>
+</section>
+</body>
+</html>

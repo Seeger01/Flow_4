@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<meta name="viewport" content="width=device-width; initial-scale=1;">
+<link href="hotbot.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo.min.js"></script>
+
+<!--embedded javascript-->
+<script type="text/javascript">
+
+	//document ready function takes an anonymous function as argurement
+	$(document).ready(function(){
+		
+		// implimenting hotbot function
+		$("#sweetbot").click(myFunction);
+		
+		// implimenting the scrollTo plugin
+		$(".stickynav a").click(function(e){
+		
+		// prevent page_refresh
+		e.preventDefault();
+		// $(element).scrollTo(target[,duration][,settings]);
+		$(window).scrollTo(this.hash,1000);
+			
+		});
+		// end document ready
+		});
+	function myFunction(){
+	// opening a new page in a tab
+		window.open("../sweetbot.html", "_blank");
+	}
+	
+</script>
+</head>
+
+<body>
+<!--Navigation bar-->
+	<div id="header">
+		<div>
+			<a href="#home"><img class="logo" src="hotbot-logo.png" width="431" height="93" alt=""/></a>
+		</div>
+		<nav class="stickynav">
+			<a href="#about">Kontakt</a>
+			<a href="#history">Til kassen</a>
+			<a href="#identity">Produkter</a>
+			<button id="sweetbot">Sweetbot</button>
+
+		</nav>
+	</div>
+	
+<div class="container">
+	
+</div>
+<section id="home">
+	<h1>Hjem</h1>
+<p>The purpose of these guidelines is to explain the use of the new brand style and to
+reinforce consistent application of the visual elements in all communications. This includes
+publications, presentations, and all other marketing materials both online and offline.
+Guidelines on the use of the logo are included.</p>
+</section>
+<section id="identity">
+	<h1>Produkter</h1>
+<p>Our corporate identity is the face and personality presented to the global community. It’s
+as important as the products and services we provide. Our visual identity is the total effect
+of logo, products, brand name, trademark, advertising, brochures, and presentations—
+everything that represents us.
+	<br>
+	<br>
+Because the brand cannot be compromised, we’ve created this guide to provide all the
+pertinent specifications you need to maintain its integrity. The guidelines set in this document
+are not meant to inhibit, but to improve the creative process. By following these
+guidelines, the materials you create will represent our company cohesively to the outside
+world.</p>
+
+</section>
+<section id="history">
+	<h1>Kassen</h1>
+<p>sweetbot.design is an international oriented start-up company, currently with main focus
+on the Danish market. We are offering services and consulting within web design and web
+development, branding (visual identity) as well as internet security (network and data
+security), and are distributing our own custom web shop solution hotbot.
+The sweetbot.design team consist of 6 permanent members and a wild bunch of associated
+freelancers.</p>
+</section>
+<section id="about">
+	<h1>Kontakt</h1>
+	<p>
+	<form action="mailto:peterhalborg55@hotmail.com?subject=sending my form!" method="post" enctype="text/plain">
+	<p><input name="name" type="text" placeholder="Dit navn" required></p>
+	<p><input name="mail" type="email" placeholder="Din email" required></p>
+	<p><textarea name="massage" placeholder="Besked"></textarea></p>
+	<p><input name="submit" type="submit" value="Send"></p>
+</form>
+	
+	</p>
+</section>
+</body>
+</html>

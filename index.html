@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<title>Sweetbot</title>
+<meta name="viewport" content="width=device-width; initial-scale=1;">
+<link href="sweetbot.css" rel="stylesheet" type="text/css">
+<link href="skdslider.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="scripts/skdslider.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.scrollTo.min.js"></script>
+
+<!--embedded javascript-->
+<script type="text/javascript">
+
+	//document ready function takes an anonymous function as argurement
+	$(document).ready(function(){
+		
+		// implimenting hotbot function
+		$("#hotbot").click(myFunction);
+		
+		// implimenting the scrollTo plugin
+		$(".stickynav a").click(function(e){
+		
+		// prevent page_refresh
+		e.preventDefault();
+		// $(element).scrollTo(target[,duration][,settings]);
+		$(window).scrollTo(this.hash,1000);
+			
+		});
+		
+			jQuery('#demo').skdslider({
+	'delay':5000, // Delay duration between two slides in micro seconds.
+	'fadeSpeed': 2000, // Fading Speed in micro seconds.
+	'showNav': true, // It will show/hide navigation icon.
+	'numericNav': false // If true, navigation will be numeric
+		});
+		// end dokument ready
+		});
+	
+	function myFunction(){
+	// opening a new page in a tab
+		window.open("Hotbot/hotbot.html", "_blank");
+	}
+</script>
+</head>
+
+<body>
+<div id="header"> 
+  
+  <!--Logo-->
+  <div class="logospace"> <a href="#home"><img class="logo" src="Images/sbl.png" width="431" height="93" alt="logo"/></a> </div>
+  <div id="demo" class="skdslider">
+    <ul>
+      <li> <img src="slides/7.jpg" alt="" /> </li>
+      <li><img src="slides/8.jpg" alt="" /> </li>
+      <li><img src="slides/9.jpg" alt="" /> </li>
+    </ul>
+  </div>
+  <!--Navigation bar-->
+  <nav class="stickynav"> <a href="#about">Kontakt</a> <a href="#history">Historie</a> <a href="#identity">Identitet</a> <a href="#home">Hjem</a>
+    <button id="hotbot">Hotbot</button>
+  </nav>
+</div>
+<div class="container"> </div>
+<section id="home">
+  <h1>Hjem</h1>
+  <p> Formålet med disse retningslinjer er at forklare brugen af den nye mærkevare og til at
+         styrke konsistent anvendelse af de visuelle elementer i al kommunikation. Dette inkluderer
+         publikationer, præsentationer og alle andre marketingmaterialer både online og offline.
+         Retningslinjer for brug af logoet er inkluderet. </p>
+</section>
+<section id="identity">
+  <h1>Identitet</h1>
+  <p> Vores firma-identitet er det ansigt og den personlighed, der præsenteres for det globale samfund. Det er
+         lige så vigtigt som de produkter og tjenester, vi leverer. 
+         Vores visuelle identitet er den samlede effekt 
+         af logo, produkter, mærke, varemærke, reklame, brochurer og præsentationer-
+         alt hvad der repræsenterer os. <br>
+    <br>
+    For at vores mærke ikke skal blive beskadiget, har vi oprettet denne vejledning for at give alle de
+         Relevante specifikationer du behøver for at bevare mærkets integritet. Retningslinjerne i dette dokument
+         er ikke ment for at hæmme, men for at forbedre den kreative proces. Ved at følge disse
+         Retningslinjer, kan de materialer du opretter, repræsentere vores firma til verden uden at skade vores identitet. </p>
+</section>
+<section id="history">
+  <h1>Historie</h1>
+  <p> sweetbot.design er et internationalt orienteret start-up selskab, der i øjeblikket er med hovedfokus
+         på det danske marked. Vi tilbyder tjenester og rådgivning inden for webdesign og web
+         udvikling, branding (visuel identitet) samt internet sikkerhed (netværk og data
+         sikkerhed), og distribuerer vores egen webshop løsning hotbot.
+         Sweetbot.design teamet består af 6 faste medlemmer og en vild bunke forbundet
+         freelancere. </p>
+</section>
+<section id="about">
+  <h2>Kontakt</h2>
+  <div class="kontakt-formular">
+    <form action="mailto:jensandersen@hotmail.com?subject=sending my form!" method="post" enctype="text/plain">
+      <p>
+        <input name="name" type="text" placeholder="Dit navn" required>
+      </p>
+      <p>
+        <input name="mail" type="email" placeholder="Din email" required>
+      </p>
+      <p>
+        <textarea name="massage" placeholder="Besked"></textarea>
+      </p>
+      <p>
+        <input name="submit" type="submit" value="Send">
+      </p>
+    </form>
+  </div>
+  <div class="kontakt-formular-info"> Virksomhed: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Sweetbot Design <br>
+    Direktør: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Merete Geldermann | Marc Kluge <br>
+    Email adresse:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mli@cphbusiness.dk | klu@cphbusiness.dk <br>
+    <br>
+    <a href=""><img class="pic1" src="Images/profil1.jpg" width="150" height="150" alt="" /></a> <a href=""><img src="Images/profil2.jpg" width="150" height="150" alt="" /></a> </div>
+</section>
+</body>
+</html>
